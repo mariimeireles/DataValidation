@@ -14,10 +14,17 @@ class CustomButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.layer.cornerRadius = 5.0
-        if self.isEnabled{
-            self.alpha = 1
-        } else {
-            self.alpha = 0.3
+        self.isEnabled = false
+    }
+    
+    override var isEnabled: Bool {
+        didSet {
+            if self.isEnabled {
+                self.alpha = 1
+            } else {
+                self.alpha = 0.3
+            }
         }
     }
+    
 }
