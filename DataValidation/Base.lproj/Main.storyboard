@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Validation View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ValidationViewController" customModule="DataValidation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome completo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iT6-oY-VSl">
+                                <rect key="frame" x="29.5" y="78" width="315.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OoG-Jw-e8r"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5pV-ju-wro"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAf-T0-9vb">
+                                <rect key="frame" x="29.5" y="153" width="315.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fYH-19-bwU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eFE-o6-s0Z"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZR-Dg-bHV">
+                                <rect key="frame" x="29.5" y="228" width="315.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kY0-YC-Gui"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7w6-WK-xPe"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgA-1z-fVt" customClass="CustomButton" customModule="DataValidation" customModuleProvider="target">
+                                <rect key="frame" x="29" y="583" width="316" height="43"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="yKG-Ry-Qkv"/>
+                                </constraints>
+                                <state key="normal" title="Confirmar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oAf-T0-9vb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3JW-hs-Kto"/>
+                            <constraint firstItem="oAf-T0-9vb" firstAttribute="top" secondItem="iT6-oY-VSl" secondAttribute="bottom" constant="40" id="4zD-MX-tuC"/>
+                            <constraint firstItem="xZR-Dg-bHV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OfS-aA-Pey"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xZR-Dg-bHV" secondAttribute="trailing" constant="30" id="QHI-sO-R1u"/>
+                            <constraint firstItem="iT6-oY-VSl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UTz-yy-WQV"/>
+                            <constraint firstItem="mgA-1z-fVt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vdu-qR-XLs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oAf-T0-9vb" secondAttribute="trailing" constant="30" id="WdW-2r-tcy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iT6-oY-VSl" secondAttribute="trailing" constant="30" id="Xrb-Og-lyK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgA-1z-fVt" secondAttribute="trailing" constant="30" id="bRy-VN-vAv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mgA-1z-fVt" secondAttribute="bottom" constant="41" id="iDL-IE-wTn"/>
+                            <constraint firstItem="xZR-Dg-bHV" firstAttribute="top" secondItem="oAf-T0-9vb" secondAttribute="bottom" constant="40" id="k9t-IQ-E9a"/>
+                            <constraint firstItem="iT6-oY-VSl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="ujB-Cn-Nr4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cpfTextField" destination="xZR-Dg-bHV" id="UIa-HU-gjl"/>
+                        <outlet property="emailTextField" destination="oAf-T0-9vb" id="rG4-jX-R69"/>
+                        <outlet property="nameTextField" destination="iT6-oY-VSl" id="FvV-QT-kG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
