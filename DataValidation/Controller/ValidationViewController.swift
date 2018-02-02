@@ -57,12 +57,14 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         
         if textField == nameTextField {
             if let text = textField.text {
-                let nameResponse = nameValidator.validate(inputValue: text, label: nameLabelNote)
+                let nameResponse = nameValidator.validate(inputValue: text)
                 switch nameResponse {
                 case true:
-                    print("TRUE")
+                    nameLabelNote.text = "o nome invalido :("
+                    nameLabelNote.textColor = .red
                 case false:
-                    print("FALSE")
+                    nameLabelNote.text = "nome valido :)"
+                    nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
                 }
             }
         }
