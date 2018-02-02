@@ -14,6 +14,7 @@
 		4D1897D5202360CB00D55C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897D3202360CB00D55C1B /* LaunchScreen.storyboard */; };
 		4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897DC2023695900D55C1B /* CustomButton.swift */; };
 		4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */; };
+		4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4D1897D6202360CB00D55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1897DC2023695900D55C1B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameValidator.swift; path = DataValidation/NameValidator.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1897CA202360CB00D55C1B /* AppDelegate.swift */,
+				4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */,
 				4D1897DE2023780000D55C1B /* Controller */,
 				4D1897DF2023784D00D55C1B /* Utillities */,
 				4D1897CE202360CB00D55C1B /* Main.storyboard */,
@@ -161,6 +164,7 @@
 				4D1897CD202360CB00D55C1B /* ValidationViewController.swift in Sources */,
 				4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */,
 				4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */,
+				4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */,
 				4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
