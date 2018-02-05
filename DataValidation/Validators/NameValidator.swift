@@ -10,14 +10,17 @@ import Foundation
 
 class NameValidator {
     
-    func validate(inputValue: String) -> Bool {
-        let formattedString = inputValue.replacingOccurrences(of: " ", with: "")
+    func validate(inputName: String) -> Bool {
+        
+        let formattedString = inputName.replacingOccurrences(of: " ", with: "")
         if formattedString.count < 4 || formattedString.count > 60 {
             return false
         }
-        if inputValue.hasSuffix(" ") || inputValue.hasPrefix(" ") {
+        
+        if inputName.hasSuffix(" ") || inputName.hasPrefix(" ") {
             return false
         }
+        
         return true
     }
     

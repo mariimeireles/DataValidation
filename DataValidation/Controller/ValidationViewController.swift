@@ -19,6 +19,7 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cpfLabelNote: UILabel!
     
     var nameValidator = NameValidator()
+    var cpfValidator = CPFValidator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         nameTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         emailTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         cpfTextField.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        cpfTextField.keyboardType = .numberPad
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -38,6 +40,24 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         if textField == nameTextField {
             let newLength = (textField.text?.count)! + string.count - range.length
             return newLength <= 60
+        }
+        
+        if textField == cpfTextField{
+            if let stringText = cpfTextField.text {
+                if (stringText.count == 3 || stringText.count == 7) && string != ""{
+                    cpfTextField.text = "\(cpfTextField.text!).\(string)"
+                    return false
+                }
+                if (stringText.count == 11) && string != ""{
+                    cpfTextField.text = "\(cpfTextField.text!)-\(string)"
+                    return false
+                }
+                if range.length + range.location > (cpfTextField.text?.count)!{
+                    return false
+                }
+                let newLenght = (cpfTextField.text?.count)! + string.count - range.length
+                return newLenght <= 14
+            }
         }
         return true
     }
@@ -72,8 +92,7 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
             }
         
         if !name.isEmpty {
-            
-            let nameResponse = nameValidator.validate(inputValue: name)
+            let nameResponse = nameValidator.validate(inputName: name)
             switch nameResponse {
             case true:
                 nameLabelNote.text = "nome valido :)"
@@ -91,19 +110,19 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
             emailLabelNote.text = ""
         }
         
-        if cpf.isEmpty {
+        if !cpf.isEmpty {
+            let cpfResponse = cpfValidator.validate(inputCPF: cpf)
         } else {
             cpfLabelNote.text = ""
 
         }
         guard
-            nameValidator.validate(inputValue: name) == true
+            nameValidator.validate(inputName: name) == true
             else {
                 confirmButton.isEnabled = false
                 return
             }
         confirmButton.isEnabled = true
-
     }
     
     func clearNotes() {
