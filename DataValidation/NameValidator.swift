@@ -15,8 +15,10 @@ class NameValidator {
         if formattedString.count < 4 || formattedString.count > 60 {
             return false
         }
+        if inputValue.hasSuffix(" ") || inputValue.hasPrefix(" ") {
+            return false
+        }
         return true
     }
     
-
 }

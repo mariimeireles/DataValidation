@@ -26,15 +26,41 @@ class NameValidatorTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_shouldNotAccept_AnEmptyName() {
+    func test_shouldntAccept_anEmptyName() {
         let emptyName = ""
         let validation = nameValidatorUnderTest.validate(inputValue: emptyName)
         XCTAssertEqual(validation, REJECTED)
     }
     
-    func testLessCharacters() {
-        let name = "ana"
-        let expected = nameValidatorUnderTest.validate(inputValue: name)
-        XCTAssertFalse(expected)
+    func test_shouldntAccept_nameWithoutLastName() {
+        let nameWithoutLastName = "Mariana "
+        let validation = nameValidatorUnderTest.validate(inputValue: nameWithoutLastName)
+        XCTAssertEqual(validation, REJECTED)
     }
+    
+    func test_shouldntAccept_lastNameWhithoutName() {
+        let lastNameWithoutName = " Meireles"
+        let validation = nameValidatorUnderTest.validate(inputValue: lastNameWithoutName)
+        XCTAssertEqual(validation, REJECTED)
+    }
+    
+    func test_shouldntAccept_lessCharacters() {
+        let name = "Ana"
+        let validation = nameValidatorUnderTest.validate(inputValue: name)
+        XCTAssertEqual(validation, REJECTED)
+    }
+    
+    func test_shouldntAccept_moreCharacters() {
+        let name = "aaaaaaaaaa bbbbbbbbbb cccccccccc dddddddddd eeeeeeeeee ffffffffff g"
+        let validation = nameValidatorUnderTest.validate(inputValue: name)
+        XCTAssertEqual(validation, REJECTED)
+    }
+    
+    func test_shouldAccept_validName() {
+        let name = "Mariana Ribeiro Meireles"
+        let validation = nameValidatorUnderTest.validate(inputValue: name)
+        XCTAssertEqual(validation, ACCEPTED)
+    }
+    
+    
 }
