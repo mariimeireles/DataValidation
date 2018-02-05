@@ -9,7 +9,6 @@
 import XCTest
 @testable import DataValidation
 
-
 class NameValidatorTests: XCTestCase {
     
     let ACCEPTED = true
