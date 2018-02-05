@@ -14,7 +14,8 @@ class CPFValidator {
         
         let formattedString = inputCPF.replacingOccurrences(of: "[-.]", with: "", options: .regularExpression, range: nil)
         
-        if formattedString == "00000000000" || formattedString == "11111111111" || formattedString == "22222222222" || formattedString == "33333333333" || formattedString == "44444444444" || formattedString == "55555555555" || formattedString == "66666666666" || formattedString == "77777777777" || formattedString == "88888888888" || formattedString == "99999999999" || formattedString == "12345678909" {
+        let invalidsCPF = ["00000000000", "11111111111", "22222222222", "33333333333", "44444444444", "55555555555", "66666666666", "77777777777", "88888888888", "99999999999", "12345678909"]
+        if invalidsCPF.contains(inputCPF) {
             return false
         }
         
