@@ -49,25 +49,12 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
             self.nameTextField.text = ""
             self.emailTextField.text = ""
             self.cpfTextField.text = ""
+            self.clearNotes()
         }))
         self.present(confirmAlert, animated: true, completion: nil)
     }
     
     @objc func editingChanged(_ textField: UITextField) {
-        
-        if textField == nameTextField {
-            if let text = textField.text {
-                let nameResponse = nameValidator.validate(inputValue: text)
-                switch nameResponse {
-                case true:
-                    nameLabelNote.text = "o nome invalido :("
-                    nameLabelNote.textColor = .red
-                case false:
-                    nameLabelNote.text = "nome valido :)"
-                    nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-                }
-            }
-        }
         
         if textField.text?.count == 1 {
             if textField.text?.first == " " {
@@ -75,15 +62,54 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
                 return
             }
         }
+        
         guard
-            let name = nameTextField.text, !name.isEmpty,
-            let email = emailTextField.text, !email.isEmpty,
-            let cpf = cpfTextField.text, !cpf.isEmpty
+            let name = nameTextField.text,
+            let email = emailTextField.text,
+            let cpf = cpfTextField.text
+            else {
+                return
+            }
+        
+        if !name.isEmpty {
+            
+            let nameResponse = nameValidator.validate(inputValue: name)
+            switch nameResponse {
+            case true:
+                nameLabelNote.text = "nome valido :)"
+                nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
+            case false:
+                nameLabelNote.text = "nome invalido :("
+                nameLabelNote.textColor = .red
+            }
+        } else {
+            nameLabelNote.text = ""
+        }
+        
+        if !email.isEmpty {
+        } else {
+            emailLabelNote.text = ""
+        }
+        
+        if cpf.isEmpty {
+        } else {
+            cpfLabelNote.text = ""
+
+        }
+        guard
+            nameValidator.validate(inputValue: name) == true
             else {
                 confirmButton.isEnabled = false
                 return
-        }
+            }
         confirmButton.isEnabled = true
+
+    }
+    
+    func clearNotes() {
+        nameLabelNote.text = ""
+        emailLabelNote.text = ""
+        cpfLabelNote.text = ""
     }
     
     
