@@ -14,7 +14,19 @@
 		4D1897D5202360CB00D55C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897D3202360CB00D55C1B /* LaunchScreen.storyboard */; };
 		4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897DC2023695900D55C1B /* CustomButton.swift */; };
 		4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */; };
+		4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */; };
+		4D57DE2E2024F2760037D90D /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D57DE2D2024F2760037D90D /* NameValidatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D57DE302024F2760037D90D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1897BF202360CB00D55C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D1897C6202360CB00D55C1B;
+			remoteInfo = DataValidation;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D1897C7202360CB00D55C1B /* DataValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +38,21 @@
 		4D1897D6202360CB00D55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1897DC2023695900D55C1B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameValidator.swift; path = DataValidation/NameValidator.swift; sourceTree = SOURCE_ROOT; };
+		4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D57DE2D2024F2760037D90D /* NameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
+		4D57DE2F2024F2760037D90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D1897C4202360CB00D55C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D57DE282024F2760037D90D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1897C9202360CB00D55C1B /* DataValidation */,
+				4D57DE2C2024F2760037D90D /* NameValidatorTests */,
 				4D1897C8202360CB00D55C1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1897C7202360CB00D55C1B /* DataValidation.app */,
+				4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1897CA202360CB00D55C1B /* AppDelegate.swift */,
+				4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */,
 				4D1897DE2023780000D55C1B /* Controller */,
 				4D1897DF2023784D00D55C1B /* Utillities */,
 				4D1897CE202360CB00D55C1B /* Main.storyboard */,
@@ -86,6 +112,15 @@
 			path = Utillities;
 			sourceTree = "<group>";
 		};
+		4D57DE2C2024F2760037D90D /* NameValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D57DE2D2024F2760037D90D /* NameValidatorTests.swift */,
+				4D57DE2F2024F2760037D90D /* Info.plist */,
+			);
+			path = NameValidatorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +141,24 @@
 			productReference = 4D1897C7202360CB00D55C1B /* DataValidation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4D57DE2A2024F2760037D90D /* NameValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D57DE342024F2770037D90D /* Build configuration list for PBXNativeTarget "NameValidatorTests" */;
+			buildPhases = (
+				4D57DE272024F2760037D90D /* Sources */,
+				4D57DE282024F2760037D90D /* Frameworks */,
+				4D57DE292024F2760037D90D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D57DE312024F2760037D90D /* PBXTargetDependency */,
+			);
+			name = NameValidatorTests;
+			productName = NameValidatorTests;
+			productReference = 4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -119,6 +172,11 @@
 					4D1897C6202360CB00D55C1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					4D57DE2A2024F2760037D90D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D1897C6202360CB00D55C1B;
 					};
 				};
 			};
@@ -136,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				4D1897C6202360CB00D55C1B /* DataValidation */,
+				4D57DE2A2024F2760037D90D /* NameValidatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +210,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D57DE292024F2760037D90D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -161,11 +227,28 @@
 				4D1897CD202360CB00D55C1B /* ValidationViewController.swift in Sources */,
 				4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */,
 				4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */,
+				4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */,
 				4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D57DE272024F2760037D90D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D57DE2E2024F2760037D90D /* NameValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D57DE312024F2760037D90D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D1897C6202360CB00D55C1B /* DataValidation */;
+			targetProxy = 4D57DE302024F2760037D90D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4D1897CE202360CB00D55C1B /* Main.storyboard */ = {
@@ -324,6 +407,38 @@
 			};
 			name = Release;
 		};
+		4D57DE322024F2770037D90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = NameValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.NameValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Debug;
+		};
+		4D57DE332024F2770037D90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = NameValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.NameValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +456,15 @@
 			buildConfigurations = (
 				4D1897DA202360CB00D55C1B /* Debug */,
 				4D1897DB202360CB00D55C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D57DE342024F2770037D90D /* Build configuration list for PBXNativeTarget "NameValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D57DE322024F2770037D90D /* Debug */,
+				4D57DE332024F2770037D90D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

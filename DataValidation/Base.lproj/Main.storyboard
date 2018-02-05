@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="35" id="OoG-Jw-e8r"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5pV-ju-wro"/>
@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="35" id="fYH-19-bwU"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eFE-o6-s0Z"/>
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="height" constant="35" id="kY0-YC-Gui"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7w6-WK-xPe"/>
@@ -65,18 +65,42 @@
                                     <action selector="confirmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXr-we-Dag"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BU-C4-kd0" userLabel="Name Label Note">
+                                <rect key="frame" x="297" y="117" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGe-jy-VUP" userLabel="Email Label Note">
+                                <rect key="frame" x="297" y="196" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-tB-SMo" userLabel="CPF Label Note">
+                                <rect key="frame" x="297" y="271" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oAf-T0-9vb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3JW-hs-Kto"/>
                             <constraint firstItem="oAf-T0-9vb" firstAttribute="top" secondItem="iT6-oY-VSl" secondAttribute="bottom" constant="40" id="4zD-MX-tuC"/>
+                            <constraint firstItem="1BU-C4-kd0" firstAttribute="top" secondItem="iT6-oY-VSl" secondAttribute="bottom" constant="5" id="8I4-Df-ZC8"/>
+                            <constraint firstItem="1BU-C4-kd0" firstAttribute="trailing" secondItem="iT6-oY-VSl" secondAttribute="trailing" constant="-5" id="Non-th-ilU"/>
                             <constraint firstItem="xZR-Dg-bHV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OfS-aA-Pey"/>
+                            <constraint firstItem="xGe-jy-VUP" firstAttribute="trailing" secondItem="oAf-T0-9vb" secondAttribute="trailing" constant="-5" id="Ofs-ay-cU0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xZR-Dg-bHV" secondAttribute="trailing" constant="30" id="QHI-sO-R1u"/>
+                            <constraint firstItem="BcL-tB-SMo" firstAttribute="trailing" secondItem="xZR-Dg-bHV" secondAttribute="trailing" constant="-5" id="UPf-i4-MWz"/>
                             <constraint firstItem="iT6-oY-VSl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UTz-yy-WQV"/>
+                            <constraint firstItem="xGe-jy-VUP" firstAttribute="top" secondItem="oAf-T0-9vb" secondAttribute="bottom" constant="5" id="Uke-2Y-k4i"/>
                             <constraint firstItem="mgA-1z-fVt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vdu-qR-XLs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oAf-T0-9vb" secondAttribute="trailing" constant="30" id="WdW-2r-tcy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iT6-oY-VSl" secondAttribute="trailing" constant="30" id="Xrb-Og-lyK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgA-1z-fVt" secondAttribute="trailing" constant="30" id="bRy-VN-vAv"/>
+                            <constraint firstItem="BcL-tB-SMo" firstAttribute="top" secondItem="xZR-Dg-bHV" secondAttribute="bottom" constant="5" id="hHD-Xl-ieV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mgA-1z-fVt" secondAttribute="bottom" constant="41" id="iDL-IE-wTn"/>
                             <constraint firstItem="xZR-Dg-bHV" firstAttribute="top" secondItem="oAf-T0-9vb" secondAttribute="bottom" constant="40" id="k9t-IQ-E9a"/>
                             <constraint firstItem="iT6-oY-VSl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="ujB-Cn-Nr4"/>
@@ -85,8 +109,11 @@
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="mgA-1z-fVt" id="KUF-cJ-8ks"/>
+                        <outlet property="cpfLabelNote" destination="BcL-tB-SMo" id="NNH-gH-gjH"/>
                         <outlet property="cpfTextField" destination="xZR-Dg-bHV" id="UIa-HU-gjl"/>
+                        <outlet property="emailLabelNote" destination="xGe-jy-VUP" id="hZh-6Z-kmV"/>
                         <outlet property="emailTextField" destination="oAf-T0-9vb" id="rG4-jX-R69"/>
+                        <outlet property="nameLabelNote" destination="1BU-C4-kd0" id="3gq-Cp-mLJ"/>
                         <outlet property="nameTextField" destination="iT6-oY-VSl" id="FvV-QT-kG6"/>
                     </connections>
                 </viewController>
