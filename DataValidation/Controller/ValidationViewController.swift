@@ -95,10 +95,10 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
             let nameResponse = nameValidator.validate(inputName: name)
             switch nameResponse {
             case true:
-                nameLabelNote.text = "nome valido :)"
+                nameLabelNote.text = "nome válido :)"
                 nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
             case false:
-                nameLabelNote.text = "nome invalido :("
+                nameLabelNote.text = "nome inválido :("
                 nameLabelNote.textColor = .red
             }
         } else {
@@ -112,12 +112,21 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         
         if !cpf.isEmpty {
             let cpfResponse = cpfValidator.validate(inputCPF: cpf)
+            switch cpfResponse {
+            case true:
+                cpfLabelNote.text = "CPF válido :)"
+                cpfLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
+            case false:
+                cpfLabelNote.text = "CPF inválido :("
+                cpfLabelNote.textColor = .red
+            }
         } else {
             cpfLabelNote.text = ""
-
         }
+        
         guard
-            nameValidator.validate(inputName: name) == true
+            nameValidator.validate(inputName: name) == true,
+            cpfValidator.validate(inputCPF: cpf) == true
             else {
                 confirmButton.isEnabled = false
                 return
