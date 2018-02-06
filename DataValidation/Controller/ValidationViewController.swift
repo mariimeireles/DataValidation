@@ -113,7 +113,7 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
                 emailLabelNote.text = "email válido :)"
                 emailLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
             case false:
-                emailLabelNote.text = "nome inválido :("
+                emailLabelNote.text = "email inválido :("
                 emailLabelNote.textColor = .red
             }
         } else {
