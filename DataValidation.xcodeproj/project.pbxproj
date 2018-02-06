@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D14989A2028D24B0011136B /* CPFValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1498992028D24B0011136B /* CPFValidatorTests.swift */; };
+		4D1498A22029CD210011136B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1498A12029CD210011136B /* EmailValidator.swift */; };
+		4D1498AA2029D6BB0011136B /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1498A92029D6BB0011136B /* EmailValidatorTests.swift */; };
 		4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897CA202360CB00D55C1B /* AppDelegate.swift */; };
 		4D1897CD202360CB00D55C1B /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897CC202360CB00D55C1B /* ValidationViewController.swift */; };
 		4D1897D0202360CB00D55C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897CE202360CB00D55C1B /* Main.storyboard */; };
@@ -28,6 +30,13 @@
 			remoteGlobalIDString = 4D1897C6202360CB00D55C1B;
 			remoteInfo = DataValidation;
 		};
+		4D1498AC2029D6BB0011136B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1897BF202360CB00D55C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D1897C6202360CB00D55C1B;
+			remoteInfo = DataValidation;
+		};
 		4D57DE302024F2760037D90D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D1897BF202360CB00D55C1B /* Project object */;
@@ -41,6 +50,10 @@
 		4D1498972028D24B0011136B /* CPFValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPFValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1498992028D24B0011136B /* CPFValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFValidatorTests.swift; sourceTree = "<group>"; };
 		4D14989B2028D24B0011136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D1498A12029CD210011136B /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4D1498A72029D6BB0011136B /* EmailValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1498A92029D6BB0011136B /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
+		4D1498AB2029D6BB0011136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1897C7202360CB00D55C1B /* DataValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1897CA202360CB00D55C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D1897CC202360CB00D55C1B /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +72,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		4D1498942028D24B0011136B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D1498A42029D6BB0011136B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,12 +111,22 @@
 			path = CPFValidatorTests;
 			sourceTree = "<group>";
 		};
+		4D1498A82029D6BB0011136B /* EmailValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D1498A92029D6BB0011136B /* EmailValidatorTests.swift */,
+				4D1498AB2029D6BB0011136B /* Info.plist */,
+			);
+			path = EmailValidatorTests;
+			sourceTree = "<group>";
+		};
 		4D1897BE202360CB00D55C1B = {
 			isa = PBXGroup;
 			children = (
 				4D1897C9202360CB00D55C1B /* DataValidation */,
 				4D57DE2C2024F2760037D90D /* NameValidatorTests */,
 				4D1498982028D24B0011136B /* CPFValidatorTests */,
+				4D1498A82029D6BB0011136B /* EmailValidatorTests */,
 				4D1897C8202360CB00D55C1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +137,7 @@
 				4D1897C7202360CB00D55C1B /* DataValidation.app */,
 				4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */,
 				4D1498972028D24B0011136B /* CPFValidatorTests.xctest */,
+				4D1498A72029D6BB0011136B /* EmailValidatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +179,7 @@
 			children = (
 				4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */,
 				4D29DDB12028B51300C370EC /* CPFValidator.swift */,
+				4D1498A12029CD210011136B /* EmailValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -180,6 +212,24 @@
 			name = CPFValidatorTests;
 			productName = CPFValidatorTests;
 			productReference = 4D1498972028D24B0011136B /* CPFValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D1498A62029D6BB0011136B /* EmailValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D1498AE2029D6BB0011136B /* Build configuration list for PBXNativeTarget "EmailValidatorTests" */;
+			buildPhases = (
+				4D1498A32029D6BB0011136B /* Sources */,
+				4D1498A42029D6BB0011136B /* Frameworks */,
+				4D1498A52029D6BB0011136B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D1498AD2029D6BB0011136B /* PBXTargetDependency */,
+			);
+			name = EmailValidatorTests;
+			productName = EmailValidatorTests;
+			productReference = 4D1498A72029D6BB0011136B /* EmailValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4D1897C6202360CB00D55C1B /* DataValidation */ = {
@@ -232,6 +282,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4D1897C6202360CB00D55C1B;
 					};
+					4D1498A62029D6BB0011136B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D1897C6202360CB00D55C1B;
+					};
 					4D1897C6202360CB00D55C1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -259,12 +314,20 @@
 				4D1897C6202360CB00D55C1B /* DataValidation */,
 				4D57DE2A2024F2760037D90D /* NameValidatorTests */,
 				4D1498962028D24B0011136B /* CPFValidatorTests */,
+				4D1498A62029D6BB0011136B /* EmailValidatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4D1498952028D24B0011136B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D1498A52029D6BB0011136B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,11 +362,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D1498A32029D6BB0011136B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1498AA2029D6BB0011136B /* EmailValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D1897C3202360CB00D55C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4D1897CD202360CB00D55C1B /* ValidationViewController.swift in Sources */,
+				4D1498A22029CD210011136B /* EmailValidator.swift in Sources */,
 				4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */,
 				4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */,
 				4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */,
@@ -327,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = 4D1897C6202360CB00D55C1B /* DataValidation */;
 			targetProxy = 4D14989C2028D24B0011136B /* PBXContainerItemProxy */;
+		};
+		4D1498AD2029D6BB0011136B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D1897C6202360CB00D55C1B /* DataValidation */;
+			targetProxy = 4D1498AC2029D6BB0011136B /* PBXContainerItemProxy */;
 		};
 		4D57DE312024F2760037D90D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -380,6 +457,38 @@
 				INFOPLIST_FILE = CPFValidatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Stone.CPFValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Release;
+		};
+		4D1498AF2029D6BB0011136B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = EmailValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmailValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Debug;
+		};
+		4D1498B02029D6BB0011136B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = EmailValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.EmailValidatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,6 +673,15 @@
 			buildConfigurations = (
 				4D14989E2028D24B0011136B /* Debug */,
 				4D14989F2028D24B0011136B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D1498AE2029D6BB0011136B /* Build configuration list for PBXNativeTarget "EmailValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D1498AF2029D6BB0011136B /* Debug */,
+				4D1498B02029D6BB0011136B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
