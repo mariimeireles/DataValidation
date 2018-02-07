@@ -147,6 +147,7 @@
 			children = (
 				4D1897CA202360CB00D55C1B /* AppDelegate.swift */,
 				4D29DDB02028B4F700C370EC /* Validators */,
+				4D37B04A202A5217002C14B9 /* Presenter */,
 				4D1897DE2023780000D55C1B /* Controller */,
 				4D1897DF2023784D00D55C1B /* Utillities */,
 				4D1897CE202360CB00D55C1B /* Main.storyboard */,
@@ -182,6 +183,13 @@
 				4D1498A12029CD210011136B /* EmailValidator.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		4D37B04A202A5217002C14B9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		4D57DE2C2024F2760037D90D /* NameValidatorTests */ = {
