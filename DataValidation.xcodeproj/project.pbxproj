@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D14989A2028D24B0011136B /* CPFValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1498992028D24B0011136B /* CPFValidatorTests.swift */; };
 		4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897CA202360CB00D55C1B /* AppDelegate.swift */; };
 		4D1897CD202360CB00D55C1B /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897CC202360CB00D55C1B /* ValidationViewController.swift */; };
 		4D1897D0202360CB00D55C1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897CE202360CB00D55C1B /* Main.storyboard */; };
 		4D1897D2202360CB00D55C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897D1202360CB00D55C1B /* Assets.xcassets */; };
 		4D1897D5202360CB00D55C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1897D3202360CB00D55C1B /* LaunchScreen.storyboard */; };
 		4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1897DC2023695900D55C1B /* CustomButton.swift */; };
+		4D29DDB22028B51300C370EC /* CPFValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29DDB12028B51300C370EC /* CPFValidator.swift */; };
 		4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */; };
 		4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */; };
 		4D57DE2E2024F2760037D90D /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D57DE2D2024F2760037D90D /* NameValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D14989C2028D24B0011136B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D1897BF202360CB00D55C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D1897C6202360CB00D55C1B;
+			remoteInfo = DataValidation;
+		};
 		4D57DE302024F2760037D90D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D1897BF202360CB00D55C1B /* Project object */;
@@ -29,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1498972028D24B0011136B /* CPFValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPFValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1498992028D24B0011136B /* CPFValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFValidatorTests.swift; sourceTree = "<group>"; };
+		4D14989B2028D24B0011136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1897C7202360CB00D55C1B /* DataValidation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1897CA202360CB00D55C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D1897CC202360CB00D55C1B /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
@@ -37,14 +49,22 @@
 		4D1897D4202360CB00D55C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D1897D6202360CB00D55C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1897DC2023695900D55C1B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4D29DDB12028B51300C370EC /* CPFValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFValidator.swift; sourceTree = "<group>"; };
 		4D40EFAF20237F0A00C3EA85 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameValidator.swift; path = DataValidation/NameValidator.swift; sourceTree = SOURCE_ROOT; };
+		4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NameValidator.swift; path = DataValidation/Validators/NameValidator.swift; sourceTree = SOURCE_ROOT; };
 		4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NameValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D57DE2D2024F2760037D90D /* NameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
 		4D57DE2F2024F2760037D90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D1498942028D24B0011136B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D1897C4202360CB00D55C1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,11 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1498982028D24B0011136B /* CPFValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D1498992028D24B0011136B /* CPFValidatorTests.swift */,
+				4D14989B2028D24B0011136B /* Info.plist */,
+			);
+			path = CPFValidatorTests;
+			sourceTree = "<group>";
+		};
 		4D1897BE202360CB00D55C1B = {
 			isa = PBXGroup;
 			children = (
 				4D1897C9202360CB00D55C1B /* DataValidation */,
 				4D57DE2C2024F2760037D90D /* NameValidatorTests */,
+				4D1498982028D24B0011136B /* CPFValidatorTests */,
 				4D1897C8202360CB00D55C1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +106,7 @@
 			children = (
 				4D1897C7202360CB00D55C1B /* DataValidation.app */,
 				4D57DE2B2024F2760037D90D /* NameValidatorTests.xctest */,
+				4D1498972028D24B0011136B /* CPFValidatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1897CA202360CB00D55C1B /* AppDelegate.swift */,
-				4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */,
+				4D29DDB02028B4F700C370EC /* Validators */,
 				4D1897DE2023780000D55C1B /* Controller */,
 				4D1897DF2023784D00D55C1B /* Utillities */,
 				4D1897CE202360CB00D55C1B /* Main.storyboard */,
@@ -112,6 +143,15 @@
 			path = Utillities;
 			sourceTree = "<group>";
 		};
+		4D29DDB02028B4F700C370EC /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				4D40EFB32024A6FF00C3EA85 /* NameValidator.swift */,
+				4D29DDB12028B51300C370EC /* CPFValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		4D57DE2C2024F2760037D90D /* NameValidatorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +164,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D1498962028D24B0011136B /* CPFValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D1498A02028D24B0011136B /* Build configuration list for PBXNativeTarget "CPFValidatorTests" */;
+			buildPhases = (
+				4D1498932028D24B0011136B /* Sources */,
+				4D1498942028D24B0011136B /* Frameworks */,
+				4D1498952028D24B0011136B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D14989D2028D24B0011136B /* PBXTargetDependency */,
+			);
+			name = CPFValidatorTests;
+			productName = CPFValidatorTests;
+			productReference = 4D1498972028D24B0011136B /* CPFValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4D1897C6202360CB00D55C1B /* DataValidation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D1897D9202360CB00D55C1B /* Build configuration list for PBXNativeTarget "DataValidation" */;
@@ -169,6 +227,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Mariana Meireles | Stone";
 				TargetAttributes = {
+					4D1498962028D24B0011136B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4D1897C6202360CB00D55C1B;
+					};
 					4D1897C6202360CB00D55C1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -195,11 +258,19 @@
 			targets = (
 				4D1897C6202360CB00D55C1B /* DataValidation */,
 				4D57DE2A2024F2760037D90D /* NameValidatorTests */,
+				4D1498962028D24B0011136B /* CPFValidatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D1498952028D24B0011136B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D1897C5202360CB00D55C1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +291,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D1498932028D24B0011136B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D14989A2028D24B0011136B /* CPFValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D1897C3202360CB00D55C1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +307,7 @@
 				4D40EFB020237F0A00C3EA85 /* Keyboard.swift in Sources */,
 				4D1897CB202360CB00D55C1B /* AppDelegate.swift in Sources */,
 				4D40EFB42024A6FF00C3EA85 /* NameValidator.swift in Sources */,
+				4D29DDB22028B51300C370EC /* CPFValidator.swift in Sources */,
 				4D1897DD2023695900D55C1B /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +323,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D14989D2028D24B0011136B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D1897C6202360CB00D55C1B /* DataValidation */;
+			targetProxy = 4D14989C2028D24B0011136B /* PBXContainerItemProxy */;
+		};
 		4D57DE312024F2760037D90D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D1897C6202360CB00D55C1B /* DataValidation */;
@@ -270,6 +355,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D14989E2028D24B0011136B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = CPFValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.CPFValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Debug;
+		};
+		4D14989F2028D24B0011136B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQU3QL4RG3;
+				INFOPLIST_FILE = CPFValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Stone.CPFValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataValidation.app/DataValidation";
+			};
+			name = Release;
+		};
 		4D1897D7202360CB00D55C1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -442,6 +559,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D1498A02028D24B0011136B /* Build configuration list for PBXNativeTarget "CPFValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D14989E2028D24B0011136B /* Debug */,
+				4D14989F2028D24B0011136B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4D1897C2202360CB00D55C1B /* Build configuration list for PBXProject "DataValidation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
