@@ -11,9 +11,9 @@ import XCTest
 
 class EmailValidatorTests: XCTestCase {
     
-    let ACCEPTED = true
-    let REJECTED = false
-    var emailValidatorUnderTest: EmailValidator!
+    private let ACCEPTED = true
+    private let REJECTED = false
+    private var emailValidatorUnderTest: EmailValidator!
     
     override func setUp() {
         super.setUp()

@@ -11,9 +11,9 @@ import XCTest
 
 class NameValidatorTests: XCTestCase {
     
-    let ACCEPTED = true
-    let REJECTED = false
-    var nameValidatorUnderTest: NameValidator!
+    private let ACCEPTED = true
+    private let REJECTED = false
+    private var nameValidatorUnderTest: NameValidator!
 
     override func setUp() {
         super.setUp()
