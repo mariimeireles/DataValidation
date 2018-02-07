@@ -20,6 +20,7 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
     
     var nameValidator = NameValidator()
     var cpfValidator = CPFValidator()
+    var emailValidator = EmailValidator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,15 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         }
         
         if !email.isEmpty {
+            let emailResponse = emailValidator.validate(inputEmail: email)
+            switch emailResponse {
+            case true:
+                emailLabelNote.text = "email válido :)"
+                emailLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
+            case false:
+                emailLabelNote.text = "email inválido :("
+                emailLabelNote.textColor = .red
+            }
         } else {
             emailLabelNote.text = ""
         }
@@ -126,7 +136,8 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         
         guard
             nameValidator.validate(inputName: name) == true,
-            cpfValidator.validate(inputCPF: cpf) == true
+            cpfValidator.validate(inputCPF: cpf) == true,
+            emailValidator.validate(inputEmail: email) == true
             else {
                 confirmButton.isEnabled = false
                 return
