@@ -55,15 +55,19 @@ class DataValidationPresenter {
         view.onReadyToValidate()
     }
     
+    func resetViewState() {
+        view.clearAllFields()
+        view.disableConfirmButton()
+        nameState = .invalid
+        emailState = .invalid
+        cpfState = .invalid
+    }
+    
     private func checkConfirmButton() {
         if allFieldsAreValid {
-            if !view.isConfirmButtonEnabled{
-                view.enableConfirmButton()
-            }
+            view.enableConfirmButton()
         } else {
-            if view.isConfirmButtonEnabled {
-                view.disableConfirmButton()
-            }
+            view.disableConfirmButton()
         }
     }
 

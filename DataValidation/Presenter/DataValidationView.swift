@@ -18,4 +18,5 @@ protocol DataValidationView {
     var isConfirmButtonEnabled: Bool { get }
     func enableConfirmButton()
     func disableConfirmButton()
+    func clearAllFields()
 }
