@@ -103,65 +103,6 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         if (cpfTextField.text?.isEmpty)! {
             cpfLabelNote.text = ""
         }
-//        guard
-//            let name = nameTextField.text,
-//            let email = emailTextField.text,
-//            let cpf = cpfTextField.text
-//            else {
-//                return
-//            }
-//
-//        if !name.isEmpty {
-//            let nameResponse = nameValidator.validate(inputName: name)
-//            switch nameResponse {
-//            case true:
-//                nameLabelNote.text = "nome válido :)"
-//                nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-//            case false:
-//                nameLabelNote.text = "nome inválido :("
-//                nameLabelNote.textColor = .red
-//            }
-//        } else {
-//            nameLabelNote.text = ""
-//        }
-//
-//        if !email.isEmpty {
-//            let emailResponse = emailValidator.validate(inputEmail: email)
-//            switch emailResponse {
-//            case true:
-//                emailLabelNote.text = "email válido :)"
-//                emailLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-//            case false:
-//                emailLabelNote.text = "email inválido :("
-//                emailLabelNote.textColor = .red
-//            }
-//        } else {
-//            emailLabelNote.text = ""
-//        }
-//
-//        if !cpf.isEmpty {
-//            let cpfResponse = cpfValidator.validate(inputCPF: cpf)
-//            switch cpfResponse {
-//            case true:
-//                cpfLabelNote.text = "CPF válido :)"
-//                cpfLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-//            case false:
-//                cpfLabelNote.text = "CPF inválido :("
-//                cpfLabelNote.textColor = .red
-//            }
-//        } else {
-//            cpfLabelNote.text = ""
-//        }
-//
-//        guard
-//            nameValidator.validate(inputName: name) == true,
-//            cpfValidator.validate(inputCPF: cpf) == true,
-//            emailValidator.validate(inputEmail: email) == true
-//            else {
-//                confirmButton.isEnabled = falssse
-//                return
-//            }
-//        confirmButton.isEnabled = true
     }
 }
 
@@ -172,43 +113,18 @@ extension ValidationViewController: DataValidationView {
     }
     
     func onNameInvalid(state: DataValidatorState) {
-        print("STATE: \(state)")
-        switch state {
-        case .default:
-            nameLabelNote.text = ""
-        case .valid:
-            nameLabelNote.text = "nome válido :)"
-            nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-        case .invalid:
-            nameLabelNote.text = "nome inválido :("
-            nameLabelNote.textColor = .red
-        }
+        nameLabelNote.text = "nome " + state.text
+        nameLabelNote.textColor = state.color
     }
     
     func onEmailInvalid(state: DataValidatorState) {
-        switch state {
-        case .default:
-            emailLabelNote.text = ""
-        case .valid:
-            emailLabelNote.text = "email válido :)"
-            emailLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-        case .invalid:
-            emailLabelNote.text = "email inválido :("
-            emailLabelNote.textColor = .red
-        }
+        emailLabelNote.text = "email " + state.text
+        emailLabelNote.textColor = state.color
     }
     
     func onCPFInvalid(state: DataValidatorState) {
-        switch state {
-        case .default:
-            cpfLabelNote.text = ""
-        case .valid:
-            cpfLabelNote.text = "CPF válido :)"
-            cpfLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-        case .invalid:
-            cpfLabelNote.text = "CPF inválido :("
-            cpfLabelNote.textColor = .red
-        }
+        cpfLabelNote.text = "cpf " + state.text
+        cpfLabelNote.textColor = state.color
     }
     
     func onReadyToValidate() {
