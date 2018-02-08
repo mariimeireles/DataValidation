@@ -151,6 +151,38 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         cpfLabelNote.text = ""
     }
     
+}
+
+extension ValidationViewController: DataValidationView {
+    
+    var isConfirmButtonEnabled: Bool {
+        return confirmButton.isEnabled
+    }
+    
+    func onNameInvalid(state: DataValidatorState) {
+        
+    }
+    
+    func onEmailInvalid(state: DataValidatorState) {
+        
+    }
+    
+    func onCPFInvalid(state: DataValidatorState) {
+        
+    }
+    
+    func onReadyToValidate() {
+        
+    }
+    
+    func enableConfirmButton() {
+        
+    }
+    
+    func disableConfirmButton() {
+        
+    }
+    
     
 }
 
