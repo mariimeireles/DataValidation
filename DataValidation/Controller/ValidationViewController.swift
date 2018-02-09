@@ -22,6 +22,10 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
     var cpfValidator = CPFValidator()
     var emailValidator = EmailValidator()
     
+    private lazy var presenter: DataValidationPresenter = {
+        return DataValidationPresenter(view: self, nameValidator: nameValidator, emailValidator: emailValidator, cpfValidator: cpfValidator)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
@@ -63,16 +67,21 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func validate(textField: UITextField) {
+        let text = textField.text ?? ""
+        if textField == nameTextField {
+            presenter.userNameChanged(name: text)
+        }
+        else if textField == emailTextField {
+            presenter.userEmailChanged(email: text)
+        }
+        else {
+            presenter.userCPFChanged(cpf: text)
+        }
+    }
+    
     @IBAction func confirmButton(_ sender: Any) {
-        let confirmAlert = UIAlertController(title: "Parabéns!", message: "Seus dados estão validados", preferredStyle: UIAlertControllerStyle.alert)
-        confirmAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) -> Void in
-            self.confirmButton.isEnabled = false
-            self.nameTextField.text = ""
-            self.emailTextField.text = ""
-            self.cpfTextField.text = ""
-            self.clearNotes()
-        }))
-        self.present(confirmAlert, animated: true, completion: nil)
+        onReadyToValidate()
     }
     
     @objc func editingChanged(_ textField: UITextField) {
@@ -83,74 +92,18 @@ class ValidationViewController: UIViewController, UITextFieldDelegate {
                 return
             }
         }
+        validate(textField: textField)
         
-        guard
-            let name = nameTextField.text,
-            let email = emailTextField.text,
-            let cpf = cpfTextField.text
-            else {
-                return
-            }
-        
-        if !name.isEmpty {
-            let nameResponse = nameValidator.validate(inputName: name)
-            switch nameResponse {
-            case true:
-                nameLabelNote.text = "nome válido :)"
-                nameLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-            case false:
-                nameLabelNote.text = "nome inválido :("
-                nameLabelNote.textColor = .red
-            }
-        } else {
+        if (nameTextField.text?.isEmpty)! {
             nameLabelNote.text = ""
         }
-        
-        if !email.isEmpty {
-            let emailResponse = emailValidator.validate(inputEmail: email)
-            switch emailResponse {
-            case true:
-                emailLabelNote.text = "email válido :)"
-                emailLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-            case false:
-                emailLabelNote.text = "email inválido :("
-                emailLabelNote.textColor = .red
-            }
-        } else {
+        if (emailTextField.text?.isEmpty)! {
             emailLabelNote.text = ""
         }
-        
-        if !cpf.isEmpty {
-            let cpfResponse = cpfValidator.validate(inputCPF: cpf)
-            switch cpfResponse {
-            case true:
-                cpfLabelNote.text = "CPF válido :)"
-                cpfLabelNote.textColor = UIColor(red:0.07, green:0.46, blue:0.25, alpha:1.0)
-            case false:
-                cpfLabelNote.text = "CPF inválido :("
-                cpfLabelNote.textColor = .red
-            }
-        } else {
+        if (cpfTextField.text?.isEmpty)! {
             cpfLabelNote.text = ""
         }
-        
-        guard
-            nameValidator.validate(inputName: name) == true,
-            cpfValidator.validate(inputCPF: cpf) == true,
-            emailValidator.validate(inputEmail: email) == true
-            else {
-                confirmButton.isEnabled = false
-                return
-            }
-        confirmButton.isEnabled = true
     }
-    
-    func clearNotes() {
-        nameLabelNote.text = ""
-        emailLabelNote.text = ""
-        cpfLabelNote.text = ""
-    }
-    
 }
 
 extension ValidationViewController: DataValidationView {
@@ -160,29 +113,44 @@ extension ValidationViewController: DataValidationView {
     }
     
     func onNameInvalid(state: DataValidatorState) {
-        
+        nameLabelNote.text = "nome " + state.text
+        nameLabelNote.textColor = state.color
     }
     
     func onEmailInvalid(state: DataValidatorState) {
-        
+        emailLabelNote.text = "email " + state.text
+        emailLabelNote.textColor = state.color
     }
     
     func onCPFInvalid(state: DataValidatorState) {
-        
+        cpfLabelNote.text = "cpf " + state.text
+        cpfLabelNote.textColor = state.color
     }
     
     func onReadyToValidate() {
-        
+        let confirmAlert = UIAlertController(title: "Parabéns!", message: "Seus dados estão validados", preferredStyle: UIAlertControllerStyle.alert)
+        confirmAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) -> Void in
+            self.presenter.resetViewState()
+        }))
+        self.present(confirmAlert, animated: true, completion: nil)
     }
     
     func enableConfirmButton() {
-        
+        confirmButton.isEnabled = true
     }
     
     func disableConfirmButton() {
-        
+        confirmButton.isEnabled = false
     }
     
+    func clearAllFields() {
+        self.nameTextField.text = ""
+        self.emailTextField.text = ""
+        self.cpfTextField.text = ""
+        self.nameLabelNote.text = ""
+        self.emailLabelNote.text = ""
+        self.cpfLabelNote.text = ""
+    }
     
 }
 
