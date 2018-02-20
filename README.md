@@ -1,16 +1,16 @@
 # DataValidation
 
-### :pencil2: Project for studies purpose
+:pencil2: Project for studies purpose
 
 MVP iOS Swift project with a single view register form with fields validation and Unit tests
 
-#### Run tests
+### Run Tests
 
-###### Xcode
+#### Xcode
 
 Go to `Product > Test` or press `command + U`
 
-###### Terminal
+#### Terminal
 
 You can run project tests by entering in the terminal:
 
